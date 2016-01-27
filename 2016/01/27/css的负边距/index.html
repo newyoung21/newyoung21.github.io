@@ -23,7 +23,7 @@
 如下图
 在文档流中，元素的最终边界是由margi">
 <meta property="og:image" content="http://yoursite.com/2016/01/27/css的负边距/vvv.PNG">
-<meta property="og:updated_time" content="2016-01-27T17:36:57.273Z">
+<meta property="og:updated_time" content="2016-01-27T17:41:24.018Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="关于css的负边距">
 <meta name="twitter:description" content="今天整理一下margin: 为负值的几种情况1.普通文本流元素普通流元素margin为负值时，left,top可以理解为左边和上边收缩，
@@ -139,7 +139,7 @@
 <p>下图是三个浮动的DIV<br><img src="/2016/01/27/css的负边距/float.PNG" alt=""></p>
 <p>设置margin-left:-50px,这时浮动元素会向左边收缩移动50px<br>第一个元素向左移动了50px,同时第二个元素也向左移动50px，覆盖了第一个元素，所以第一个元素看起来宽度只有100px，第二个150px,第三个200px.<br><img src="/2016/01/27/css的负边距/float-left.PNG" alt=""></p>
 <p>接下来把窗口缩小，如下图，空间不够，第三个掉到下面去<br><img src="/2016/01/27/css的负边距/float-left02.PNG" alt=""></p>
-<p>这里有个注意点，如果想要第三个跑上去，那第三个元素要小于上面的空间，这时可以使用margin负值<br>设置第三个元素的margin-left:-160px，这时元素会收缩，收缩到上面空间能容纳，元素就会跑上去（很多布局都是利用这个原理，圣杯，双飞翼）<br><img src="/2016/01/27/css的负边距/float-left03.PNG" alt=""><br>其实，right，top,bottom,跟上面同理，可以概括为margin为负值时，元素会向里面收缩，并且改变原来的空间（浮动流），使其周围的元素会靠拢过来。<br>这里再说一下margin-left:-100%</p>
+<p>这里有个注意点，如果想要第三个跑上去，那第三个元素要小于上面的空间，这时可以使用margin负值<br>设置第三个元素的margin-left:-160px，这时元素会收缩，收缩到上面空间能容纳，元素就会跑上去（很多布局都是利用这个原理，圣杯，双飞翼）<br><img src="/2016/01/27/css的负边距/float-left03.PNG" alt=""><br>其实，right，top,bottom,跟上面同理，可以概括为margin为负值时，元素会向里面收缩，并且改变原来的空间（浮动流），使其周围的元素会靠拢过来，浮动元素还有一点就是当收缩到上一行元素有空间容纳它，就会跑上去<br>这里再说一下margin-left:-100%</p>
 <blockquote>
 <p>原理是使对象向左移动一段距离，这段距离等于父体的内容宽度。</p>
 </blockquote>
