@@ -14,8 +14,8 @@
 <meta property="og:url" content="http://yoursite.com/2016/01/27/关于css的富边距/index.html">
 <meta property="og:site_name" content="行健阁">
 <meta property="og:description" content="今天整理一下margin: 为负值的几种情况1.普通文本流元素普通流元素margin为负值时，left,top可以理解为左边和上边收往缩.1&amp;#60;body&amp;#62;&amp;#10;&amp;#60;div class=&amp;#34;d1&amp;#34;&amp;#62;top:-50px&amp;#60;/div&amp;#62;&amp;#10;&amp;#60;div class=&amp;#34;d2&amp;#34;&amp;#62;left:-50px&amp;#60;/div">
-<meta property="og:image" content="http://yoursite.com/2016/01/27/css负边距/vvv.PNG">
-<meta property="og:updated_time" content="2016-01-27T09:15:07.039Z">
+<meta property="og:image" content="http://yoursite.com/2016/01/27/关于css的富边距/vvv.PNG">
+<meta property="og:updated_time" content="2016-01-27T09:21:06.033Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="关于css的负边距">
 <meta name="twitter:description" content="今天整理一下margin: 为负值的几种情况1.普通文本流元素普通流元素margin为负值时，left,top可以理解为左边和上边收往缩.1&amp;#60;body&amp;#62;&amp;#10;&amp;#60;div class=&amp;#34;d1&amp;#34;&amp;#62;top:-50px&amp;#60;/div&amp;#62;&amp;#10;&amp;#60;div class=&amp;#34;d2&amp;#34;&amp;#62;left:-50px&amp;#60;/div">
@@ -119,7 +119,7 @@
         </p>
         <div class="article-entry" itemprop="articleBody">
             <h2 id="u4ECA_u5929_u6574_u7406_u4E00_u4E0Bmargin_3A__u4E3A_u8D1F_u503C_u7684_u51E0_u79CD_u60C5_u51B5"><a href="#u4ECA_u5929_u6574_u7406_u4E00_u4E0Bmargin_3A__u4E3A_u8D1F_u503C_u7684_u51E0_u79CD_u60C5_u51B5" class="headerlink" title="今天整理一下margin: 为负值的几种情况"></a>今天整理一下margin: 为负值的几种情况</h2><h3 id="1-_u666E_u901A_u6587_u672C_u6D41_u5143_u7D20"><a href="#1-_u666E_u901A_u6587_u672C_u6D41_u5143_u7D20" class="headerlink" title="1.普通文本流元素"></a>1.普通文本流元素</h3><p>普通流元素margin为负值时，left,top可以理解为左边和上边收往缩.<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#60;body&#62;&#10;&#60;div class=&#34;d1&#34;&#62;top:-50px&#60;/div&#62;&#10;&#60;div class=&#34;d2&#34;&#62;left:-50px&#60;/div&#62;&#10;&#60;/body&#62;&#10;&#10;div&#123;&#10;  width:200px;&#10;  height:100px;&#10;&#10;&#125;&#10;.d1&#123;&#10;  background:blue;&#10;  margin-top:-50px;&#10;&#125;&#10;.d2&#123;&#10;  background:red;&#10;  margin-left:-50px;&#10;&#125;</span><br></pre></td></tr></table></figure></p>
-<p><img src="/2016/01/27/css负边距/vvv.PNG" alt=""><br>当right为负值时，右边的元素会被吸过来。<br>如果时块级元素，这是元素不会发生变化，因为块级元素右边没有其他元素<br>如果是行内块级元素，那它右边的元素会向它靠拢。</p>
+<p><img src="/vvv.PNG" alt=""><br>当right为负值时，右边的元素会被吸过来。<br>如果时块级元素，这是元素不会发生变化，因为块级元素右边没有其他元素<br>如果是行内块级元素，那它右边的元素会向它靠拢。</p>
 <p>当bottom为负值时，元素后面的元素会被拉上来</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#60;div class=&#34;d1&#34;&#62;&#60;/div&#62;&#10;&#10;.di&#123;&#10;&#9; background:red;&#10;&#9; width:100px;&#10;  &#9; height:100px;&#10;&#125;</span><br></pre></td></tr></table></figure>
 <h3 id="2-_u6D6E_u52A8_u5143_u7D20"><a href="#2-_u6D6E_u52A8_u5143_u7D20" class="headerlink" title="2.浮动元素"></a>2.浮动元素</h3>
@@ -295,7 +295,7 @@ ds.charset = 'UTF-8';
                             <a href="/2016/01/27/关于css的富边距/" class="thumbnail">
     
     
-        <span style="background-image:url(/2016/01/27/css负边距/vvv.PNG)" alt="关于css的负边距" class="thumbnail-image"></span>
+        <span style="background-image:url(/2016/01/27/关于css的富边距/vvv.PNG)" alt="关于css的负边距" class="thumbnail-image"></span>
     
 </a>
                         </div>
