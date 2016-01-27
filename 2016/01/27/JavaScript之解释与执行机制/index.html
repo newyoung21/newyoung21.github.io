@@ -22,7 +22,7 @@ Java">
 解析型语言：程序不需要编译，程序在运行是才翻译成机器语言，每执行一次都要翻译一次  编译型语言：程序在执行之前需要一个专门的编译过程，把程序编译成为机器语言文件，运行是不需要重新翻译，直接使用编译的结果
 
 Java">
-<meta property="og:updated_time" content="2016-01-27T07:11:14.165Z">
+<meta property="og:updated_time" content="2016-01-27T07:27:14.606Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="JavaScript之解释与执行机制">
 <meta name="twitter:description" content="JavaScript不同于其他的编译性语言如java、C等，运行前要将其编译为机器语言的文件，JavaScript是在运行程序的时候才翻译，即JavaScript是一门解析性脚本语言
@@ -140,14 +140,16 @@ Java">
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#60;script type=&#34;text/javascript&#34;&#62;&#10;&#9;var a = 2;&#10;&#9;function b()&#123;&#10;&#9;&#9;return 3;&#125;&#10;&#60;/script&#62;&#10;&#60;script type=&#34;text/javascript&#34;&#62;&#10;&#9;console.log(a);&#10;&#9;console.log(b());&#10;&#60;/script&#62;</span><br></pre></td></tr></table></figure>
 <p>所以上面出来的结果是2和3</p>
 <h2 id="u89E3_u91CA"><a href="#u89E3_u91CA" class="headerlink" title="解释"></a>解释</h2><p>javasrcript代码块执行时现由解释器进行解释，主要过程是声明所有var变量（声明时并未初始化赋值，当前值为undefined），解析声明式函数语句（javaScript中函数定义主要主要有两种：声明式与函数表达式）,而且是先预定义变量再预定义函数。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">//&#22768;&#26126;&#24335;&#20989;&#25968;&#10;function demo()&#123;&#10;&#9;//...&#10;&#125;&#10;//&#20989;&#25968;&#34920;&#36798;&#24335;&#10;var demo = function ()&#123;&#10;&#9;//...&#10;&#125;</span><br></pre></td></tr></table></figure></p>
-<p>###代码分析<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">alert(a);&#10;alert(&#39;hi&#39;);&#10;var a = 1;</span><br></pre></td></tr></table></figure></p>
+<h2 id="u4EE3_u7801_u5206_u6790"><a href="#u4EE3_u7801_u5206_u6790" class="headerlink" title="代码分析"></a>代码分析</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">alert(a);&#10;alert(&#39;hi&#39;);&#10;var a = 1;</span><br></pre></td></tr></table></figure>
 <p>弹出undefined和hi,因为执行是先解释（变量提升）：先定义var变量，并未初始化赋值，所以当前a为undefined.</p>
-<p>###看下面代码<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">alert(a);&#10;alert(&#39;hi&#39;);&#10;a = 1;</span><br></pre></td></tr></table></figure></p>
+<h2 id="u770B_u4E0B_u9762_u4EE3_u7801"><a href="#u770B_u4E0B_u9762_u4EE3_u7801" class="headerlink" title="看下面代码"></a>看下面代码</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">alert(a);&#10;alert(&#39;hi&#39;);&#10;a = 1;</span><br></pre></td></tr></table></figure>
 <p>会发现报错了，因为a未定义，解释时定义var变量，并不会定义此处的a</p>
 <p>到这里我们又发现了一个值得关注的问题–定义变量的方式。</p>
 <blockquote>
 <p>JavaScript变量分两种：全局变量和局部变量。像a = 1;这种定义默认是创建全局变量，其实就相当于window.a = 1;而var a = 1;这种格式是定义一个当前作用域下的变量。解释时只会定义var格式的变量。</p>
 </blockquote>
+<h2 id="u51FD_u6570_u58F0_u660E"><a href="#u51FD_u6570_u58F0_u660E" class="headerlink" title="函数声明"></a>函数声明</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#60;script&#62;&#10;    a();  &#10;    var a = function()&#123; //&#20989;&#25968;&#34920;&#36798;&#24335;&#10;        alert(&#34;&#20989;&#25968;&#34920;&#36798;&#24335;&#34;);&#10;    &#125;&#10;    alert(&#39;hello1&#39;);&#10;&#60;/script&#62;&#10;&#60;script&#62;&#10;    a();  &#10;    function a()&#123; //&#22768;&#26126;&#24335;&#20989;&#25968;&#10;        alert(&#34;&#22768;&#26126;&#24335;&#20989;&#25968;&#34;);&#10;    &#125;&#10;    alert(&#39;hello2&#39;);&#10;&#60;/script&#62;</span><br></pre></td></tr></table></figure>
+<p>上面的代码运行后会弹出 声明式函数和hello2 .<br>因为第一段代码的函数是函数表达式，所以执行时不会被解释，只是定义了a变量，未初始化，值为undefine，不是函数，因为报错而阻塞了下面的代码<br>又因为javascript代码块之间是相互独立的,所以第二段代码不受影响。</p>
 
         </div>
         <footer class="article-footer">
