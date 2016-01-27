@@ -12,7 +12,7 @@
 如下图当right为负值时，右边的元素会被吸过来。如果时块级元素，这是元素不会发生变化，因为块级元素右边没有其他元素如果是行内块级元素，那它右边的元素会向它靠拢。
 当bottom为负值时，元素后面的元素会被拉上来
 如下图
-2.浮动元素">
+在文档流中，元素的最终边界是由marg">
 <meta property="og:type" content="article">
 <meta property="og:title" content="关于css的负边距">
 <meta property="og:url" content="http://yoursite.com/2016/01/27/css的负边距/index.html">
@@ -21,16 +21,16 @@
 如下图当right为负值时，右边的元素会被吸过来。如果时块级元素，这是元素不会发生变化，因为块级元素右边没有其他元素如果是行内块级元素，那它右边的元素会向它靠拢。
 当bottom为负值时，元素后面的元素会被拉上来
 如下图
-2.浮动元素">
+在文档流中，元素的最终边界是由marg">
 <meta property="og:image" content="http://yoursite.com/2016/01/27/css的负边距/vvv.PNG">
-<meta property="og:updated_time" content="2016-01-27T09:36:15.095Z">
+<meta property="og:updated_time" content="2016-01-27T12:53:16.500Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="关于css的负边距">
 <meta name="twitter:description" content="今天整理一下margin: 为负值的几种情况1.普通文本流元素普通流元素margin为负值时，left,top可以理解为左边和上边收往缩.
 如下图当right为负值时，右边的元素会被吸过来。如果时块级元素，这是元素不会发生变化，因为块级元素右边没有其他元素如果是行内块级元素，那它右边的元素会向它靠拢。
 当bottom为负值时，元素后面的元素会被拉上来
 如下图
-2.浮动元素">
+在文档流中，元素的最终边界是由marg">
 
     
 
@@ -134,7 +134,11 @@
 <h3 id="u5982_u4E0B_u56FE"><a href="#u5982_u4E0B_u56FE" class="headerlink" title="如下图"></a>如下图</h3><p><img src="/2016/01/27/css的负边距/vvv.PNG" alt=""><br>当right为负值时，右边的元素会被吸过来。<br>如果时块级元素，这是元素不会发生变化，因为块级元素右边没有其他元素<br>如果是行内块级元素，那它右边的元素会向它靠拢。</p>
 <p>当bottom为负值时，元素后面的元素会被拉上来</p>
 <h3 id="u5982_u4E0B_u56FE-1"><a href="#u5982_u4E0B_u56FE-1" class="headerlink" title="如下图"></a>如下图</h3><p><img src="/2016/01/27/css的负边距/bottom.PNG" alt=""></p>
-<h3 id="2-_u6D6E_u52A8_u5143_u7D20"><a href="#2-_u6D6E_u52A8_u5143_u7D20" class="headerlink" title="2.浮动元素"></a>2.浮动元素</h3>
+<p>在文档流中，元素的最终边界是由margin决定的，margin为负的时候就相当于元素的边界向里收，文档流认的只是这个边界，不会管你实际的尺寸是多少。</p>
+<h3 id="2-_u6D6E_u52A8_u5143_u7D20"><a href="#2-_u6D6E_u52A8_u5143_u7D20" class="headerlink" title="2.浮动元素"></a>2.浮动元素</h3><p>负边距对浮动元素的影响与负边距对文档流中元素的影响其实是差不多的。文档流中元素的位置由文档流的走向决定，浮动的元素也可以看成有一个“浮动流”存在，不过浮动流既可以向左，也可以向右。</p>
+<p>下图是三个浮动的DIV<br><img src="/2016/01/27/css的负边距/float.PNG" alt=""></p>
+<p>设置margin-left:-50px;<br><img src="/2016/01/27/css的负边距/float-left.PNG" alt=""></p>
+
         </div>
         <footer class="article-footer">
             
