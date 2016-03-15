@@ -3,33 +3,18 @@
 <head>
     <meta charset="utf-8">
     
-    <title>JavaScript之解释与执行机制 | 行健阁</title>
+    <title>归档: 2016/3 | 行健阁</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     
-        <meta name="keywords" content="JavaScript" />
-    
-    <meta name="description" content="JavaScript不同于其他的编译性语言如java、C等，运行前要将其编译为机器语言的文件，JavaScript是在运行程序的时候才翻译，即JavaScript是一门解析性脚本语言
-
-解析型语言：程序不需要编译，程序在运行是才翻译成机器语言，每执行一次都要翻译一次  编译型语言：程序在执行之前需要一个专门的编译过程，把程序编译成为机器语言文件，运行是不需要重新翻译，直接使用编译的结果
-
-Java">
-<meta property="og:type" content="article">
-<meta property="og:title" content="JavaScript之解释与执行机制">
-<meta property="og:url" content="http://yoursite.com/2016/01/27/JavaScript之解释与执行机制/index.html">
+    <meta name="description">
+<meta property="og:type" content="website">
+<meta property="og:title" content="行健阁">
+<meta property="og:url" content="http://yoursite.com/archives/2016/03/index.html">
 <meta property="og:site_name" content="行健阁">
-<meta property="og:description" content="JavaScript不同于其他的编译性语言如java、C等，运行前要将其编译为机器语言的文件，JavaScript是在运行程序的时候才翻译，即JavaScript是一门解析性脚本语言
-
-解析型语言：程序不需要编译，程序在运行是才翻译成机器语言，每执行一次都要翻译一次  编译型语言：程序在执行之前需要一个专门的编译过程，把程序编译成为机器语言文件，运行是不需要重新翻译，直接使用编译的结果
-
-Java">
-<meta property="og:updated_time" content="2016-01-27T07:28:53.373Z">
+<meta property="og:description">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="JavaScript之解释与执行机制">
-<meta name="twitter:description" content="JavaScript不同于其他的编译性语言如java、C等，运行前要将其编译为机器语言的文件，JavaScript是在运行程序的时候才翻译，即JavaScript是一门解析性脚本语言
-
-解析型语言：程序不需要编译，程序在运行是才翻译成机器语言，每执行一次都要翻译一次  编译型语言：程序在执行之前需要一个专门的编译过程，把程序编译成为机器语言文件，运行是不需要重新翻译，直接使用编译的结果
-
-Java">
+<meta name="twitter:title" content="行健阁">
+<meta name="twitter:description">
 
     
 
@@ -106,153 +91,66 @@ Java">
                         <div class="main-body-header">
     <h1 class="header">
     
-    <a class="page-title-link" href="/categories/前端/">前端</a><i class="icon fa fa-angle-right"></i><a class="page-title-link" href="/categories/前端/JavaScript/">JavaScript</a>
+    <i class="icon fa fa-archive"></i>归档: 2016/3
     </h1>
 </div>
                         <div class="main-body-content">
-                            <article id="post-JavaScript之解释与执行机制" class="article article-single article-type-post" itemscope itemprop="blogPost">
-    <div class="article-inner">
+                            
+
+    
+    
         
-            <header class="article-header">
-                
+        
+        <section class="archives-wrap">
+            <div class="archive-year-wrap">
+                <a href="/archives/2016" class="archive-year"><i class="icon fa fa-calendar-o"></i>2016</a>
+            </div>
+            <div class="archives">
+    
+    
+    
+        <div class="article-row">
+    
+        <article class="article article-summary">
+    <div class="article-summary-inner">
+        
+        <a href="/2016/03/15/JavaScript的原型与继承/" class="thumbnail">
+    
+    
+        <span class="thumbnail-image thumbnail-none"></span>
+    
+</a>
+        
+        <div class="article-meta">
+            <p class="category">
+            <a class="article-category-link" href="/categories/前端/">前端</a><i class="icon fa fa-angle-right"></i><a class="article-category-link" href="/categories/前端/JavaScript/">JavaScript</a>
+            </p>
+            <p class="date"><time datetime="2016-03-15T15:27:15.000Z" itemprop="datePublished">2016-03-15</time></p>
+        </div>
+        
     
         <h1 class="article-title" itemprop="name">
-        JavaScript之解释与执行机制
+        <a href="/2016/03/15/JavaScript的原型与继承/">JavaScript的原型与继承</a>
         </h1>
     
 
-            </header>
-        
-        <p class="article-byline">
-            <a href="/2016/01/27/JavaScript之解释与执行机制/" class="article-date">
-    <time datetime="2016-01-27T05:52:10.000Z" itemprop="datePublished">2016-01-27</time>
-</a>
+        <p class="article-excerpt">
+            JavaScript是一门基于原型的语言，它的继承是以原型链来继承的
+首先来说一说什么是原型 JavaScript中创建的每一函数都有一个prototype属性，这个属性是一个指针，指向一个对象，这个对象的作用是包含可以由特定类型实例共享的属性和方法，这个对象就是函数的原型对象。
+有了原型概念之后，看一下函数创建的过程
+1function A()&#123;&#125;
+当我们在代码里面声明这么一
         </p>
-        <div class="article-entry" itemprop="articleBody">
-            <p>JavaScript不同于其他的编译性语言如java、C等，运行前要将其编译为机器语言的文件，JavaScript是在运行程序的时候才翻译，即JavaScript是一门解析性脚本语言</p>
-<blockquote>
-<p>解析型语言：程序不需要编译，程序在运行是才翻译成机器语言，每执行一次都要翻译一次<br>  编译型语言：程序在执行之前需要一个专门的编译过程，把程序编译成为机器语言文件，运行是不需要重新翻译，直接使用编译的结果</p>
-</blockquote>
-<h2 id="JavaScript_u89E3_u91CA_u4E0E_u6267_u884C"><a href="#JavaScript_u89E3_u91CA_u4E0E_u6267_u884C" class="headerlink" title="JavaScript解释与执行"></a>JavaScript解释与执行</h2><p>JavaScript按照代码块来进行解释和执行，代码块间相互独立，但变量和方法共享。</p>
-<blockquote>
-<p>JavaScript中的代码块是指由<script></script>标签分割的代码段</p>
-</blockquote>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#60;script type=&#34;text/javascript&#34;&#62;&#10;&#9;var a = 2;&#10;&#9;function b()&#123;&#10;&#9;&#9;return 3;&#125;&#10;&#60;/script&#62;&#10;&#60;script type=&#34;text/javascript&#34;&#62;&#10;&#9;console.log(a);&#10;&#9;console.log(b());&#10;&#60;/script&#62;</span><br></pre></td></tr></table></figure>
-<p>所以上面出来的结果是2和3</p>
-<h2 id="u89E3_u91CA"><a href="#u89E3_u91CA" class="headerlink" title="解释"></a>解释</h2><p>javasrcript代码块执行时现由解释器进行解释，主要过程是声明所有var变量（声明时并未初始化赋值，当前值为undefined），解析声明式函数语句（javaScript中函数定义主要主要有两种：声明式与函数表达式）,而且是先预定义变量再预定义函数。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">//&#22768;&#26126;&#24335;&#20989;&#25968;&#10;function demo()&#123;&#10;&#9;//...&#10;&#125;&#10;//&#20989;&#25968;&#34920;&#36798;&#24335;&#10;var demo = function ()&#123;&#10;&#9;//...&#10;&#125;</span><br></pre></td></tr></table></figure></p>
-<h2 id="u4EE3_u7801_u5206_u6790"><a href="#u4EE3_u7801_u5206_u6790" class="headerlink" title="代码分析"></a>代码分析</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">alert(a);&#10;alert(&#39;hi&#39;);&#10;var a = 1;</span><br></pre></td></tr></table></figure>
-<p>弹出undefined和hi,因为执行是先解释（变量提升）：先定义var变量，并未初始化赋值，所以当前a为undefined.</p>
-<h2 id="u770B_u4E0B_u9762_u4EE3_u7801"><a href="#u770B_u4E0B_u9762_u4EE3_u7801" class="headerlink" title="看下面代码"></a>看下面代码</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">alert(a);&#10;alert(&#39;hi&#39;);&#10;a = 1;</span><br></pre></td></tr></table></figure>
-<p>会发现报错了，因为a未定义，解释时定义var变量，并不会定义此处的a</p>
-<p>到这里我们又发现了一个值得关注的问题–定义变量的方式。</p>
-<blockquote>
-<p>JavaScript变量分两种：全局变量和局部变量。像a = 1;这种定义默认是创建全局变量，其实就相当于window.a = 1;而var a = 1;这种格式是定义一个当前作用域下的变量。解释时只会定义var格式的变量。</p>
-</blockquote>
-<h2 id="u51FD_u6570_u58F0_u660E"><a href="#u51FD_u6570_u58F0_u660E" class="headerlink" title="函数声明"></a>函数声明</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#60;script&#62;&#10;    a();  &#10;    var a = function()&#123; //&#20989;&#25968;&#34920;&#36798;&#24335;&#10;        alert(&#34;&#20989;&#25968;&#34920;&#36798;&#24335;&#34;);&#10;    &#125;&#10;    alert(&#39;hello1&#39;);&#10;&#60;/script&#62;&#10;&#60;script&#62;&#10;    a();  &#10;    function a()&#123; //&#22768;&#26126;&#24335;&#20989;&#25968;&#10;        alert(&#34;&#22768;&#26126;&#24335;&#20989;&#25968;&#34;);&#10;    &#125;&#10;    alert(&#39;hello2&#39;);&#10;&#60;/script&#62;</span><br></pre></td></tr></table></figure>
-<p>上面的代码运行后会弹出 声明式函数和hello2 .<br>因为第一段代码的函数是函数表达式，所以执行时不会被解释，只是定义了a变量，未初始化，值为undefine，不是函数，因为报错而阻塞了下面的代码<br>又因为javascript代码块之间是相互独立的,所以第二段代码不受影响。</p>
-
-        </div>
-        <footer class="article-footer">
-            
-
-    <div class="bdsharebuttonbox">
-    <a href="#" class="bds_more" data-cmd="more">分享到：</a>
-    <a href="#" class="bds_qzone" data-cmd="qzone" title="分享到QQ空间">QQ空间</a>
-    <a href="#" class="bds_tsina" data-cmd="tsina" title="分享到新浪微博">新浪微博</a>
-    <a href="#" class="bds_tqq" data-cmd="tqq" title="分享到腾讯微博">腾讯微博</a>
-    <a href="#" class="bds_renren" data-cmd="renren" title="分享到人人网">人人网</a>
-    <a href="#" class="bds_weixin" data-cmd="weixin" title="分享到微信">微信</a>
-</div>
-<script>
-window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"0","bdSize":"16"},"share":{"bdSize":16}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
-</script>
-<style>
-    .bdshare_popup_box {
-        border-radius: 4px;
-        border: #e1e1e1 solid 1px;
-    }
-    .bdshare-button-style0-16 a,
-    .bdshare-button-style0-16 .bds_more {
-        padding-left: 20px;
-        margin: 6px 10px 6px 0;
-    }
-    .bdshare_dialog_list a,
-    .bdshare_popup_list a,
-    .bdshare_popup_bottom a {
-        font-family: 'Microsoft Yahei';
-    }
-    .bdshare_popup_top {
-        display: none;
-    }
-    .bdshare_popup_bottom {
-        height: auto;
-        padding: 5px;
-    }
-</style>
-
-
-
-            
-            
-    <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JavaScript/">JavaScript</a></li></ul>
-
-        </footer>
     </div>
 </article>
+    
+        </div>
+    
 
-<section id="comments">
 
-    <div class="ds-thread" data-thread-key="post-JavaScript之解释与执行机制" data-title="JavaScript之解释与执行机制" data-url="http://yoursite.com/2016/01/27/JavaScript之解释与执行机制/"></div>
-<script type="text/javascript">
-var duoshuoQuery = {short_name:'true'};
-(function() {
-var ds = document.createElement('script');
-ds.type = 'text/javascript';ds.async = true;
-ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
-ds.charset = 'UTF-8';
-(document.getElementsByTagName('head')[0]
-|| document.getElementsByTagName('body')[0]).appendChild(ds);
-})();
-</script>
-<style>
-    #ds-thread #ds-reset .ds-textarea-wrapper {
-        background: none;
-    }
-    #ds-reset .ds-avatar img {
-        box-shadow: none;
-    }
-    #ds-reset .ds-gradient-bg {
-        background: #f7f7f7;
-    }
-    #ds-thread #ds-reset li.ds-tab a {
-        border-radius: 3px;
-    }
-    #ds-thread #ds-reset .ds-post-button {
-        color: white;
-        border: none;
-        box-shadow: none;
-        background: #d32;
-        text-shadow: none;
-        font-weight: normal;
-        font-family: 'Microsoft Yahei';
-    }
-    #ds-thread #ds-reset .ds-post-button:hover {
-        color: white;
-        background: #DE594C;
-    }
-    #ds-thread #ds-reset .ds-post-button:active {
-        background: #d32;
-    }
-    #ds-smilies-tooltip ul.ds-smilies-tabs li a.ds-current {
-        color: white;
-        background: #d32;
-        box-shadow: none;
-        text-shadow: none;
-        font-weight: normal;
-    }
-</style>
+    </div></section>
 
-</section>
+
 
                         </div>
                     </section>
@@ -296,29 +194,6 @@ ds.charset = 'UTF-8';
             
         </ul>
     </div>
-    
-        
-<nav id="article-nav">
-    
-        <a href="/2016/01/27/css的负边距/" id="article-nav-newer" class="article-nav-link-wrap">
-        <strong class="article-nav-caption">下一篇</strong>
-        <p class="article-nav-title">
-        
-            关于css的负边距
-        
-        </p>
-        <i class="icon fa fa-chevron-right" id="icon-chevron-right"></i>
-    </a>
-    
-    
-        <a href="/2016/01/25/圣杯布局/" id="article-nav-older" class="article-nav-link-wrap">
-        <strong class="article-nav-caption">上一篇</strong>
-        <p class="article-nav-title">圣杯布局</p>
-        <i class="icon fa fa-chevron-left" id="icon-chevron-left"></i>
-        </a>
-    
-</nav>
-
     
     <div class="widgets-container">
         
